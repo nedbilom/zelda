@@ -3,8 +3,17 @@
 <ul>
     <% @games.each do |game| %>
         <li>
-            <h3> <%= game.title %> </h3>
+            <%# href="./games/game.id" %>
+            <a href="<%= game_path(game) %>">
+                <h3> <%= game.title %> </h3>
+            </a>
+
+            link_to Это хелпер, первый аргумент value ссылки, второй аргумент ссылка (если передан объект то ссылка сгенерится)
+            Тоже ссылка <%= link_to game.title, game %>
+
             <p> <%= game.description %> </p>
         </li>
     <% end %>
 </ul>
+
+<%= link_to "Добавить игру", new_game_path %>
