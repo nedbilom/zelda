@@ -1,0 +1,23 @@
+<%= form_with model: @game do |form| %>
+    <div>
+        <%= form.label "Название" %><br>
+        <%= form.text_field :title %>
+
+        <% @game.errors.full_messages_for(:title).each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label "Описание" %><br>
+        <%= form.text_area :description %> 
+
+        <% @game.errors.full_messages_for(:description).each do |message| %>
+            <div class="error"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

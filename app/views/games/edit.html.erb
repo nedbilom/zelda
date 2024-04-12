@@ -1,18 +1,5 @@
 <h1>страница редактирования</h1>
 
-<%= form_with model: @game do |form| %>
-    <div>
-        <%= form.label "Название" %><br>
-        <%= form.text_field :title %>
-    </div>
+<%= render "form", game: @game %>
 
-    <div>
-        <%= form.label "Описание" %><br>
-        <%= form.text_area :description %> 
-    </div>
-
-    <div>
-        <%= form.submit %>
-    </div>
-<% end %>
-
+<%= link_to "Отменить", @game %>

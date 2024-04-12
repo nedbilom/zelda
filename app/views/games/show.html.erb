@@ -3,3 +3,14 @@
 <h1>Страница игры <%= @game.title %></h1>
 
 <p><%= @game.description %></p>
+
+<%= link_to "Удалить с использованием Turbo", game_path(@game), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Удалить игру?"
+                  } %>
+
+<%# Почему то не работает %>
+<%= link_to "Удалить стандартным методом", game_path(@game), method: :delete,
+                data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Редактировать", edit_game_path(@game) %>
