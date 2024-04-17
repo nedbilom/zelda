@@ -14,3 +14,16 @@
                 data: { confirm: "Are you sure?" } %>
 
 <%= link_to "Редактировать", edit_game_path(@game) %>
+
+
+
+
+<h2>Комментарии</h2>
+<%# Я кароче хер знает каким образом но команда ниже крутит все элементы находящиеся в game.comments и на каждый рендерит `../comments/_comment.html.erb` %>
+<%= render @game.comments %>
+
+
+
+
+<h2>Добавить комментарий</h2>
+<%= render 'comments/form' %>

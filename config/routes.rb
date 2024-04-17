@@ -15,5 +15,9 @@ Rails.application.routes.draw do
 
   # get "/games/:id", to: "games#show"
 
-  resources :games
+  # resources :games <- Это создает для games CRUD
+
+  resources :games do
+    resources :comments # Это создает для всех games вложенный еще ресурс comments
+  end
 end

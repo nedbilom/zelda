@@ -1,0 +1,14 @@
+<%= form_with model: [ @game, @game.comments.build ] do |form| %>
+  <p>
+    <%= form.label "Имя" %><br>
+    <%= form.text_field :commenter %>
+  </p>
+
+  <p>
+    <%= form.label "Комментарий" %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -4,7 +4,7 @@
     <% @games.each do |game| %>
         <li>
             <%# href="./games/game.id" %>
-            <a href="<%= game_path(game) %>">
+            <a href=`<%= game_path(game) %>`>
                 <h3> <%= game.title %> </h3>
             </a>
 
